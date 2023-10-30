@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drizzle Bistro</title>
+    <style>
+        /* CSS styles for the entire page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #777070;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* CSS styles for the navigation bar */
+        .navbar {
+            background-color: #a56d9d;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #54718f;
+        }
+
+        /* CSS styles for the main content */
+        .container {
+            background-color: rgb(167, 202, 176);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* CSS styles for the menu items */
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        /* CSS styles for the form */
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], textarea {
+            width: 70%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #aa6c9e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to Drizzle Bistro</h1>
+
+        <h2>Menu</h2>
+        <div class="menu-item">
+            <span>Biriyani</span>
+            <span>Rs.250</span>
+        </div>
+        <div class="menu-item">
+            <span>Chicken Fry</span>
+            <span>Rs.150</span>
+        </div>
+        <div class="menu-item">
+            <span>Parotta</span>
+            <span>Rs.12</span>
+        </div>
+
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        // JavaScript for changing the font color of the navigation items on hover
+        const navItems = document.querySelectorAll('.navbar a');
+        navItems.forEach((item) => {
+            item.addEventListener('mouseover', () => {
+                item.style.color = '#4CAF50';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.color = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
